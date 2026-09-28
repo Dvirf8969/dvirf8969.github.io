@@ -61,11 +61,11 @@ a:focus-visible {
 
 .skip {
   position: absolute;
-  left: -9999px;
+  inset-inline-start: -9999px;
 }
 
 .skip:focus {
-  left: 16px;
+  inset-inline-start: 16px;
   top: 12px;
   background: var(--surface);
   padding: 8px 12px;
@@ -116,6 +116,20 @@ a:focus-visible {
 
 .brand svg {
   flex: none;
+}
+
+.lang {
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  padding: 6px 12px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+}
+
+.lang:hover {
+  background: var(--tint);
 }
 
 /* Home hero */
@@ -210,6 +224,10 @@ h3 {
   font-size: 1.1rem;
 }
 
+.card .blurb {
+  margin: 0 0 6px;
+}
+
 .card .status {
   margin: 0 0 10px;
   color: var(--muted);
@@ -274,7 +292,8 @@ h3 {
 
 .summary ul {
   margin: 0;
-  padding-left: 1.2em;
+  padding: 0;
+  padding-inline-start: 1.2em;
 }
 
 .toc {
@@ -293,7 +312,8 @@ h3 {
 
 .toc ol {
   margin: 0;
-  padding-left: 1.3em;
+  padding: 0;
+  padding-inline-start: 1.3em;
   columns: 1;
 }
 
@@ -317,7 +337,8 @@ h3 {
 }
 
 .doc ul {
-  padding-left: 1.2em;
+  padding: 0;
+  padding-inline-start: 1.2em;
 }
 
 .doc li {
@@ -343,4 +364,22 @@ h3 {
 
 .site-footer p {
   margin: 0;
+}
+
+/* Hebrew pages */
+[dir="rtl"] h1,
+[dir="rtl"] h2,
+[dir="rtl"] h3,
+[dir="rtl"] .brand {
+  letter-spacing: 0;
+}
+
+[dir="rtl"] .doc-head .kicker {
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.ltr {
+  direction: ltr;
+  unicode-bidi: isolate;
 }
