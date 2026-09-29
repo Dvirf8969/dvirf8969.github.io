@@ -219,6 +219,10 @@ h3 {
   background: linear-gradient(135deg, #0f8f8f, #5b4bdb);
 }
 
+.tile.radar {
+  background: linear-gradient(135deg, #e5484d, #5b4bdb);
+}
+
 .card h3 {
   margin: 2px 0 2px;
   font-size: 1.1rem;
